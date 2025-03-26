@@ -55,5 +55,8 @@ describe('Student Registration page', () => {
     cy.contains(user.subjects[0]).should('be.visible');
     cy.contains(user.hobbies).should('be.visible');
     // cy.contains(user.currentAddress).should('be.visible');
+    // cy.get('#google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0__container__').invoke('hide');
+    cy.get('#google_ads_iframe_\/21849154601\,22343295815\/Ad\.Plus-Anchor_0').invoke('hide');
+    cy.contains(user.currentAddress, { timeout: 10000 }).should('be.visible');
   });
 });
